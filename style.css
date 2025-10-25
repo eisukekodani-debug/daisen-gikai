@@ -132,8 +132,19 @@ header {
     transition: var(--transition-bounce);
 }
 
+.logo-image {
+    height: 50px;
+    width: auto;
+    transition: var(--transition-bounce);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
 .logo:hover .logo-icon {
     transform: rotate(10deg) scale(1.1);
+}
+
+.logo:hover .logo-image {
+    transform: scale(1.1);
 }
 
 .logo-text {

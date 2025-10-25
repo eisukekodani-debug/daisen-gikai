@@ -19,9 +19,7 @@ function initHeader() {
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
+                    <img src="daisen-gikai-logo.png" alt="大山町みらい議会" class="logo-image">
                     <div class="logo-text">大山町みらい議会</div>
                 </a>
                 <nav>
