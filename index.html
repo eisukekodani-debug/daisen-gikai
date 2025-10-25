@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大山町みらい議会 - あなたのまちの議会を、もっと身近に。</title>
-    <meta name="description" content="AIが議案をわかりやすく説明します。大山町の議会情報を身近に感じてください。">
+    <title>大山町みらい議会 - 町のミライ、キミが知る場所🌟</title>
+    <meta name="description" content="町で今、何が決まってるの？AIと一緒に、難しい話もサクッと理解！中学生でもわかる議会情報サイト">
 
     <!-- Google Fonts - Noto Sans JP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,14 +28,15 @@
         <!-- ヒーローセクション -->
         <section class="hero">
             <div class="container">
-                <h1 class="hero-title">あなたのまちの議会を、もっと身近に。</h1>
-                <p class="hero-subtitle">AIが議案をわかりやすく説明します</p>
+                <div class="hero-emoji">🏛️✨</div>
+                <h1 class="hero-title">町のミライ、キミが知る場所</h1>
+                <p class="hero-subtitle">大人が決めてること、実はキミにも関係あるんだよ！<br>AIと一緒に、町の「これから」をのぞいてみよう</p>
                 <div class="hero-buttons">
                     <a href="#latest-bills" class="btn btn-primary">
-                        <i class="fas fa-file-alt"></i> 最新議案を見る
+                        <i class="fas fa-fire"></i> 今アツい話題をチェック
                     </a>
                     <a href="#" class="btn btn-secondary" onclick="openDifyChat(); return false;">
-                        <i class="fas fa-comments"></i> AIに質問する
+                        <i class="fas fa-robot"></i> AIに聞いてみる
                     </a>
                 </div>
             </div>
@@ -44,29 +45,31 @@
         <!-- 最新議案セクション -->
         <section id="latest-bills" class="latest-bills">
             <div class="container">
-                <h2 class="section-title">最新の議案</h2>
-                <p class="section-subtitle">町民の皆様に影響する重要な議案をご紹介します</p>
+                <h2 class="section-title">🔥 今、町で話し合われてること</h2>
+                <p class="section-subtitle">学校のこと、公園のこと、防災のこと...キミの生活に関わる話がいっぱい！</p>
 
                 <div class="bills-grid">
                     <!-- 議案カード1 -->
                     <div class="bill-card">
                         <div class="bill-header">
-                            <span class="bill-number">議案第2号</span>
-                            <span class="bill-status status-active">審議中</span>
+                            <span class="bill-emoji">🍱</span>
+                            <span class="bill-number">議案 No.2</span>
+                            <span class="bill-status status-active">💬 話し合い中</span>
                         </div>
-                        <h3 class="bill-title">学校給食センター改修事業</h3>
+                        <h3 class="bill-title">給食センターをパワーアップ！</h3>
                         <p class="bill-description">
-                            老朽化した給食センターの全面改修を行い、衛生基準の向上と効率的な運営を目指します。
-                            改修期間中の給食提供体制についても計画されています。
+                            キミが毎日食べてる給食、実は古い施設で作られてるって知ってた？🤔
+                            最新の設備にして、もっと美味しくて安全な給食を作れるようにするんだ！
+                            工事中も給食は出るから安心してね😋
                         </p>
                         <div class="bill-meta">
                             <span class="bill-date"><i class="far fa-calendar"></i> 2025年10月15日</span>
-                            <span class="bill-budget"><i class="fas fa-yen-sign"></i> 3億2,000万円</span>
+                            <span class="bill-budget"><i class="fas fa-coins"></i> 3億2,000万円</span>
                         </div>
                         <div class="bill-actions">
-                            <a href="bill.html?id=2" class="btn btn-outline">詳細を見る</a>
-                            <button class="btn btn-primary" onclick="openDifyChat('議案第2号について教えてください')">
-                                <i class="fas fa-robot"></i> AIに質問
+                            <a href="bill.html?id=2" class="btn btn-outline">もっと詳しく</a>
+                            <button class="btn btn-primary" onclick="openDifyChat('給食センターの改修について教えて！')">
+                                <i class="fas fa-robot"></i> AIに聞く
                             </button>
                         </div>
                     </div>
@@ -74,22 +77,24 @@
                     <!-- 議案カード2 -->
                     <div class="bill-card">
                         <div class="bill-header">
-                            <span class="bill-number">議案第3号</span>
-                            <span class="bill-status status-pending">準備中</span>
+                            <span class="bill-emoji">👶</span>
+                            <span class="bill-number">議案 No.3</span>
+                            <span class="bill-status status-pending">📝 準備中</span>
                         </div>
-                        <h3 class="bill-title">子育て支援センター新設事業</h3>
+                        <h3 class="bill-title">子育て応援スポット、誕生！</h3>
                         <p class="bill-description">
-                            子育て世帯を支援するための新しいセンターを設立します。
-                            相談窓口、一時預かり、親子交流スペースなどを整備する計画です。
+                            弟や妹がいる人に朗報！👨‍👩‍👧‍👦
+                            赤ちゃんや小さい子を育ててるママ・パパが集まれる場所を作るよ。
+                            キミのお母さんやお父さんも、きっと喜ぶはず！
                         </p>
                         <div class="bill-meta">
                             <span class="bill-date"><i class="far fa-calendar"></i> 2025年10月20日</span>
-                            <span class="bill-budget"><i class="fas fa-yen-sign"></i> 1億8,500万円</span>
+                            <span class="bill-budget"><i class="fas fa-coins"></i> 1億8,500万円</span>
                         </div>
                         <div class="bill-actions">
-                            <a href="bill.html?id=3" class="btn btn-outline">詳細を見る</a>
-                            <button class="btn btn-primary" onclick="openDifyChat('議案第3号について教えてください')">
-                                <i class="fas fa-robot"></i> AIに質問
+                            <a href="bill.html?id=3" class="btn btn-outline">もっと詳しく</a>
+                            <button class="btn btn-primary" onclick="openDifyChat('子育て支援センターについて教えて！')">
+                                <i class="fas fa-robot"></i> AIに聞く
                             </button>
                         </div>
                     </div>
@@ -97,22 +102,24 @@
                     <!-- 議案カード3 -->
                     <div class="bill-card">
                         <div class="bill-header">
-                            <span class="bill-number">議案第4号</span>
-                            <span class="bill-status status-completed">可決</span>
+                            <span class="bill-emoji">🚨</span>
+                            <span class="bill-number">議案 No.4</span>
+                            <span class="bill-status status-completed">✅ 決定！</span>
                         </div>
-                        <h3 class="bill-title">地域防災計画改定</h3>
+                        <h3 class="bill-title">もしもの時に、町を守る！</h3>
                         <p class="bill-description">
-                            近年の災害状況を踏まえ、地域防災計画を全面的に見直します。
-                            避難所の増設、防災備蓄の強化、情報伝達体制の整備を行います。
+                            地震や台風が来た時、キミは安全に避難できる？🏃‍♂️
+                            避難所を増やしたり、防災アプリを作ったり...
+                            キミと家族を守るための計画が、パワーアップするよ！
                         </p>
                         <div class="bill-meta">
                             <span class="bill-date"><i class="far fa-calendar"></i> 2025年10月10日</span>
-                            <span class="bill-budget"><i class="fas fa-yen-sign"></i> 5,200万円</span>
+                            <span class="bill-budget"><i class="fas fa-coins"></i> 5,200万円</span>
                         </div>
                         <div class="bill-actions">
-                            <a href="bill.html?id=4" class="btn btn-outline">詳細を見る</a>
-                            <button class="btn btn-primary" onclick="openDifyChat('議案第4号について教えてください')">
-                                <i class="fas fa-robot"></i> AIに質問
+                            <a href="bill.html?id=4" class="btn btn-outline">もっと詳しく</a>
+                            <button class="btn btn-primary" onclick="openDifyChat('防災計画について教えて！')">
+                                <i class="fas fa-robot"></i> AIに聞く
                             </button>
                         </div>
                     </div>
@@ -121,7 +128,7 @@
                 <!-- もっと見るボタン -->
                 <div class="more-bills">
                     <a href="#" class="btn btn-outline-large">
-                        すべての議案を見る <i class="fas fa-arrow-right"></i>
+                        他にもいっぱい！全部見る <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -130,33 +137,33 @@
         <!-- 使い方セクション -->
         <section class="how-to-use">
             <div class="container">
-                <h2 class="section-title">みらい議会の使い方</h2>
+                <h2 class="section-title">📱 使い方は超カンタン！</h2>
                 <div class="steps-grid">
                     <div class="step-card">
                         <div class="step-icon">
-                            <i class="fas fa-search"></i>
+                            <i class="fas fa-hand-pointer"></i>
                         </div>
-                        <h3 class="step-title">1. 議案を探す</h3>
+                        <h3 class="step-title">1️⃣ 気になる話題をタップ</h3>
                         <p class="step-description">
-                            最新の議案一覧から、気になる議案をクリックしてください。
+                            スクロールして、「おっ、これ気になる！」ってやつをポチッ👆
                         </p>
                     </div>
                     <div class="step-card">
                         <div class="step-icon">
-                            <i class="fas fa-book-open"></i>
+                            <i class="fas fa-glasses"></i>
                         </div>
-                        <h3 class="step-title">2. 内容を確認</h3>
+                        <h3 class="step-title">2️⃣ サクッと読む</h3>
                         <p class="step-description">
-                            議案の概要、背景、予算、住民への影響などを分かりやすく表示します。
+                            難しい言葉は使ってないから、ゲームの攻略サイト読む感じでOK🎮
                         </p>
                     </div>
                     <div class="step-card">
                         <div class="step-icon">
-                            <i class="fas fa-comments"></i>
+                            <i class="fas fa-robot"></i>
                         </div>
-                        <h3 class="step-title">3. AIに質問</h3>
+                        <h3 class="step-title">3️⃣ AIに質問しちゃおう</h3>
                         <p class="step-description">
-                            分からないことがあれば、AIチャットボットに気軽に質問できます。
+                            「よくわかんない...」って時は、AIが優しく教えてくれるよ🤖✨
                         </p>
                     </div>
                 </div>
