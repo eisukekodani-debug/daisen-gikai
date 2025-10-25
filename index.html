@@ -3,25 +3,203 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>大山町みらい議会</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 80px; }
-    h1 { font-size: 2em; }
-    iframe { width: 100%; max-width: 800px; height: 600px; border: 1px solid #ccc; }
-  </style>
+  <title>大山町みらい議会 - AI議案解説サービス</title>
+  <meta name="description" content="議案をわかりやすく解説するAIチャットサービス">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>大山町みらい議会</h1>
-  <p>議案をわかりやすく解説するAIチャットです。</p>
+  <!-- 背景アニメーション -->
+  <div class="background-animation">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+  </div>
 
-  <!-- Difyチャットボット埋め込み -->
-  <iframe
-    src="https://udify.app/chatbot/kLjOXSCD0QljXnJS"
-    allow="microphone; clipboard-read; clipboard-write"
-  ></iframe>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-landmark"></i>
+        <span>大山町みらい議会</span>
+      </div>
+      <nav class="nav">
+        <a href="#about" class="nav-link">サービスについて</a>
+        <a href="#chat" class="nav-link">AI議案解説</a>
+        <a href="#contact" class="nav-link">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
 
-  <footer style="margin-top: 40px; font-size: 0.8em; color: #666;">
-    © 2025 Daisen Mirai Gikai
+  <!-- メインコンテンツ -->
+  <main>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content fade-in">
+          <h1 class="hero-title">
+            議案を、もっと
+            <span class="gradient-text">わかりやすく</span>
+          </h1>
+          <p class="hero-subtitle">
+            AIが議案内容を丁寧に解説。難しい行政用語も、誰にでも理解できる言葉で。
+          </p>
+          <div class="hero-buttons">
+            <a href="#chat" class="btn btn-primary">
+              <i class="fas fa-comments"></i>
+              AIに質問する
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              <i class="fas fa-info-circle"></i>
+              詳しく見る
+            </a>
+          </div>
+
+          <!-- 特徴カード -->
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>AI搭載</h3>
+              <p>最新のAIが24時間対応</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-language"></i>
+              </div>
+              <h3>わかりやすい</h3>
+              <p>専門用語も簡単に解説</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>どこでも利用</h3>
+              <p>スマホ・PCから簡単アクセス</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">サービスについて</h2>
+          <p class="section-subtitle">大山町みらい議会は、地域の議案をより身近に感じていただくためのAI解説サービスです</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3>議案の簡単解説</h3>
+            <p>複雑な議案内容を、誰にでもわかる言葉でお伝えします。専門知識がなくても安心してご利用いただけます。</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>気軽に質問</h3>
+            <p>わからないことは何でもAIに質問できます。あなたの疑問に、丁寧にお答えします。</p>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>地域の未来へ</h3>
+            <p>議案への理解を深めることで、より良い地域づくりに参加できます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AIチャットセクション -->
+    <section id="chat" class="chat-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="fas fa-robot"></i>
+            AI議案解説チャット
+          </h2>
+          <p class="section-subtitle">議案について知りたいことを、お気軽にご質問ください</p>
+        </div>
+
+        <div class="chat-container">
+          <div class="chat-wrapper">
+            <iframe
+              src="https://udify.app/chatbot/kLjOXSCD0QljXnJS"
+              class="chat-iframe"
+              frameborder="0"
+              allow="microphone; clipboard-read; clipboard-write"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="chat-tips">
+          <h3><i class="fas fa-lightbulb"></i> 質問例</h3>
+          <div class="tips-grid">
+            <div class="tip-item">
+              <i class="fas fa-comment-dots"></i>
+              <span>「最新の議案について教えて」</span>
+            </div>
+            <div class="tip-item">
+              <i class="fas fa-comment-dots"></i>
+              <span>「給食センターの改修って何？」</span>
+            </div>
+            <div class="tip-item">
+              <i class="fas fa-comment-dots"></i>
+              <span>「予算はどのくらいですか？」</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <h2><i class="fas fa-envelope"></i> お問い合わせ</h2>
+          <p>サービスに関するご質問・ご意見がございましたら、お気軽にお問い合わせください。</p>
+          <a href="mailto:contact@daisen-gikai.com" class="btn btn-contact">
+            <i class="fas fa-paper-plane"></i>
+            メールで問い合わせる
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fas fa-landmark"></i>
+          <span>大山町みらい議会</span>
+        </div>
+        <div class="footer-text">
+          <p>地域の未来を、みんなで考える</p>
+          <p class="copyright">© 2025 Daisen Mirai Gikai. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
