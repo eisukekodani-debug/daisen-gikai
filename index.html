@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大山町みらい議会 - あなたのまちの議会を、もっと身近に。</title>
+    <meta name="description" content="AIが議案をわかりやすく説明します。大山町の議会情報を身近に感じてください。">
+
+    <!-- Google Fonts - Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- カスタムCSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header id="header">
+        <!-- JavaScriptで共通ヘッダーを挿入 -->
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">あなたのまちの議会を、もっと身近に。</h1>
+                <p class="hero-subtitle">AIが議案をわかりやすく説明します</p>
+                <div class="hero-buttons">
+                    <a href="#latest-bills" class="btn btn-primary">
+                        <i class="fas fa-file-alt"></i> 最新議案を見る
+                    </a>
+                    <a href="#" class="btn btn-secondary" onclick="openDifyChat(); return false;">
+                        <i class="fas fa-comments"></i> AIに質問する
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新議案セクション -->
+        <section id="latest-bills" class="latest-bills">
+            <div class="container">
+                <h2 class="section-title">最新の議案</h2>
+                <p class="section-subtitle">町民の皆様に影響する重要な議案をご紹介します</p>
+
+                <div class="bills-grid">
+                    <!-- 議案カード1 -->
+                    <div class="bill-card">
+                        <div class="bill-header">
+                            <span class="bill-number">議案第2号</span>
+                            <span class="bill-status status-active">審議中</span>
+                        </div>
+                        <h3 class="bill-title">学校給食センター改修事業</h3>
+                        <p class="bill-description">
+                            老朽化した給食センターの全面改修を行い、衛生基準の向上と効率的な運営を目指します。
+                            改修期間中の給食提供体制についても計画されています。
+                        </p>
+                        <div class="bill-meta">
+                            <span class="bill-date"><i class="far fa-calendar"></i> 2025年10月15日</span>
+                            <span class="bill-budget"><i class="fas fa-yen-sign"></i> 3億2,000万円</span>
+                        </div>
+                        <div class="bill-actions">
+                            <a href="bill.html?id=2" class="btn btn-outline">詳細を見る</a>
+                            <button class="btn btn-primary" onclick="openDifyChat('議案第2号について教えてください')">
+                                <i class="fas fa-robot"></i> AIに質問
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 議案カード2 -->
+                    <div class="bill-card">
+                        <div class="bill-header">
+                            <span class="bill-number">議案第3号</span>
+                            <span class="bill-status status-pending">準備中</span>
+                        </div>
+                        <h3 class="bill-title">子育て支援センター新設事業</h3>
+                        <p class="bill-description">
+                            子育て世帯を支援するための新しいセンターを設立します。
+                            相談窓口、一時預かり、親子交流スペースなどを整備する計画です。
+                        </p>
+                        <div class="bill-meta">
+                            <span class="bill-date"><i class="far fa-calendar"></i> 2025年10月20日</span>
+                            <span class="bill-budget"><i class="fas fa-yen-sign"></i> 1億8,500万円</span>
+                        </div>
+                        <div class="bill-actions">
+                            <a href="bill.html?id=3" class="btn btn-outline">詳細を見る</a>
+                            <button class="btn btn-primary" onclick="openDifyChat('議案第3号について教えてください')">
+                                <i class="fas fa-robot"></i> AIに質問
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 議案カード3 -->
+                    <div class="bill-card">
+                        <div class="bill-header">
+                            <span class="bill-number">議案第4号</span>
+                            <span class="bill-status status-completed">可決</span>
+                        </div>
+                        <h3 class="bill-title">地域防災計画改定</h3>
+                        <p class="bill-description">
+                            近年の災害状況を踏まえ、地域防災計画を全面的に見直します。
+                            避難所の増設、防災備蓄の強化、情報伝達体制の整備を行います。
+                        </p>
+                        <div class="bill-meta">
+                            <span class="bill-date"><i class="far fa-calendar"></i> 2025年10月10日</span>
+                            <span class="bill-budget"><i class="fas fa-yen-sign"></i> 5,200万円</span>
+                        </div>
+                        <div class="bill-actions">
+                            <a href="bill.html?id=4" class="btn btn-outline">詳細を見る</a>
+                            <button class="btn btn-primary" onclick="openDifyChat('議案第4号について教えてください')">
+                                <i class="fas fa-robot"></i> AIに質問
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- もっと見るボタン -->
+                <div class="more-bills">
+                    <a href="#" class="btn btn-outline-large">
+                        すべての議案を見る <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使い方セクション -->
+        <section class="how-to-use">
+            <div class="container">
+                <h2 class="section-title">みらい議会の使い方</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="step-title">1. 議案を探す</h3>
+                        <p class="step-description">
+                            最新の議案一覧から、気になる議案をクリックしてください。
+                        </p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="step-title">2. 内容を確認</h3>
+                        <p class="step-description">
+                            議案の概要、背景、予算、住民への影響などを分かりやすく表示します。
+                        </p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="step-title">3. AIに質問</h3>
+                        <p class="step-description">
+                            分からないことがあれば、AIチャットボットに気軽に質問できます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer id="footer">
+        <!-- JavaScriptで共通フッターを挿入 -->
+    </footer>
+
+    <!-- Difyチャットボット埋め込み -->
+    <script src="https://udify.app/embed.js"
+            data-chatbot-id="daisen-gikai"
+            data-theme="light"
+            data-position="bottom-right">
+    </script>
+
+    <!-- カスタムJavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,610 @@
+/* ========================================
+   リセット & 基本設定
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* カラーパレット */
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #64748b;
+    --accent-color: #0ea5e9;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+
+    /* グレースケール */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+
+    /* テキストカラー */
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+
+    /* 背景色 */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-gray: #f3f4f6;
+
+    /* 影 */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+    /* その他 */
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   ヘッダー
+   ======================================== */
+header {
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--gray-200);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+/* ========================================
+   ヒーローセクション
+   ======================================== */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   ボタン
+   ======================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--gray-100);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-outline-large {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-outline-large:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ========================================
+   セクション共通
+   ======================================== */
+section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   議案セクション
+   ======================================== */
+.latest-bills {
+    background-color: var(--bg-secondary);
+}
+
+.bills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.bill-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.bill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.bill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.bill-number {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.bill-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-active {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-completed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.bill-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.bill-description {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.bill-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+.bill-date,
+.bill-budget {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.bill-date i,
+.bill-budget i {
+    color: var(--primary-color);
+}
+
+.bill-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.bill-actions .btn {
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.more-bills {
+    text-align: center;
+}
+
+/* ========================================
+   使い方セクション
+   ======================================== */
+.how-to-use {
+    background-color: white;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.step-card {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.step-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ========================================
+   フッター
+   ======================================== */
+footer {
+    background-color: var(--gray-800);
+    color: var(--gray-300);
+    padding: 3rem 0 1.5rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--gray-300);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--gray-700);
+    padding-top: 1.5rem;
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   議案詳細ページ
+   ======================================== */
+.bill-detail {
+    background-color: white;
+    padding: 3rem 0;
+}
+
+.bill-detail-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.bill-detail-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.bill-detail-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.bill-detail-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.detail-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.detail-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+.detail-section h3 {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--text-primary);
+}
+
+.detail-section p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.detail-section ul {
+    margin-left: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.detail-section li {
+    margin-bottom: 0.5rem;
+}
+
+.info-box {
+    background-color: var(--gray-50);
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.info-box strong {
+    color: var(--text-primary);
+}
+
+/* ========================================
+   レスポンシブデザイン
+   ======================================== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: var(--shadow-lg);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .bills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .bill-actions {
+        flex-direction: column;
+    }
+
+    .bill-actions .btn {
+        width: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .bill-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
