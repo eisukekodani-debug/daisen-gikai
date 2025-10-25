@@ -606,6 +606,35 @@ section {
 }
 
 /* ========================================
+   AIチャットセクション
+   ======================================== */
+.ai-chat-section {
+    background: linear-gradient(180deg, white 0%, var(--bg-secondary) 100%);
+    padding: 5rem 0;
+}
+
+.chat-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.chat-container:hover {
+    box-shadow: 0 25px 50px -10px rgba(99, 102, 241, 0.4);
+    transform: translateY(-5px);
+}
+
+.chat-container iframe {
+    display: block;
+    border: none;
+}
+
+/* ========================================
    フッター
    ======================================== */
 footer {

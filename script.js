@@ -29,7 +29,7 @@ function initHeader() {
                         <li><a href="index.html">🏠 ホーム</a></li>
                         <li><a href="#latest-bills">🔥 話題</a></li>
                         <li><a href="#how-to-use">❓ 使い方</a></li>
-                        <li><a href="#" onclick="openDifyChat(); return false;">
+                        <li><a href="#ai-chat">
                             <i class="fas fa-robot"></i> AIチャット
                         </a></li>
                     </ul>
@@ -66,7 +66,7 @@ function initFooter() {
                         <li><a href="index.html">🏠 トップページ</a></li>
                         <li><a href="#latest-bills">🔥 今の話題</a></li>
                         <li><a href="#how-to-use">❓ 使い方</a></li>
-                        <li><a href="#" onclick="openDifyChat(); return false;">🤖 AIと話す</a></li>
+                        <li><a href="#ai-chat">🤖 AIと話す</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -316,7 +316,7 @@ function displayBillDetail(bill) {
 
         let questionsHTML = '';
         if (bill.questions && bill.questions.length > 0) {
-            questionsHTML = '<div class="detail-section"><h2>よくある質問</h2>';
+            questionsHTML = '<div class="detail-section"><h2>❓ よくある質問</h2>';
             bill.questions.forEach(qa => {
                 questionsHTML += `
                     <div class="info-box">
@@ -330,44 +330,36 @@ function displayBillDetail(bill) {
 
         contentElement.innerHTML = `
             <div class="detail-section">
-                <h2>概要</h2>
+                <h2>📝 これって何？</h2>
                 <p>${bill.summary}</p>
             </div>
 
             <div class="detail-section">
-                <h2>背景</h2>
+                <h2>💡 どうしてやるの？</h2>
                 <p>${bill.background}</p>
             </div>
 
             <div class="detail-section">
-                <h2>目的</h2>
+                <h2>🎯 何を目指してるの？</h2>
                 <p>${bill.purpose}</p>
             </div>
 
             <div class="detail-section">
-                <h2>事業内容</h2>
+                <h2>📋 具体的に何するの？</h2>
                 ${detailsHTML}
             </div>
 
             <div class="detail-section">
-                <h2>住民への影響</h2>
+                <h2>🏘️ 町民への影響は？</h2>
                 <p>${bill.impact}</p>
             </div>
 
             <div class="detail-section">
-                <h2>実施スケジュール</h2>
+                <h2>📅 実施スケジュール</h2>
                 <p>${bill.schedule}</p>
             </div>
 
             ${questionsHTML}
-
-            <div class="detail-section">
-                <h2>この議案について質問する</h2>
-                <p>AIチャットボットで、この議案について詳しく質問することができます。</p>
-                <button class="btn btn-primary" onclick="openDifyChat('${bill.number}について教えてください')">
-                    <i class="fas fa-robot"></i> AIに質問する
-                </button>
-            </div>
         `;
     }
 }

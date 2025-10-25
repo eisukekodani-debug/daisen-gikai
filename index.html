@@ -35,7 +35,7 @@
                     <a href="#latest-bills" class="btn btn-primary">
                         <i class="fas fa-fire"></i> 今アツい話題をチェック
                     </a>
-                    <a href="#" class="btn btn-secondary" onclick="openDifyChat(); return false;">
+                    <a href="#ai-chat" class="btn btn-secondary">
                         <i class="fas fa-robot"></i> AIに聞いてみる
                     </a>
                 </div>
@@ -68,9 +68,9 @@
                         </div>
                         <div class="bill-actions">
                             <a href="bill.html?id=2" class="btn btn-outline">もっと詳しく</a>
-                            <button class="btn btn-primary" onclick="openDifyChat('給食センターの改修について教えて！')">
+                            <a href="#ai-chat" class="btn btn-primary">
                                 <i class="fas fa-robot"></i> AIに聞く
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -93,9 +93,9 @@
                         </div>
                         <div class="bill-actions">
                             <a href="bill.html?id=3" class="btn btn-outline">もっと詳しく</a>
-                            <button class="btn btn-primary" onclick="openDifyChat('子育て支援センターについて教えて！')">
+                            <a href="#ai-chat" class="btn btn-primary">
                                 <i class="fas fa-robot"></i> AIに聞く
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -118,9 +118,9 @@
                         </div>
                         <div class="bill-actions">
                             <a href="bill.html?id=4" class="btn btn-outline">もっと詳しく</a>
-                            <button class="btn btn-primary" onclick="openDifyChat('防災計画について教えて！')">
+                            <a href="#ai-chat" class="btn btn-primary">
                                 <i class="fas fa-robot"></i> AIに聞く
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -169,19 +169,28 @@
                 </div>
             </div>
         </section>
+
+        <!-- AIチャットセクション -->
+        <section class="ai-chat-section">
+            <div class="container">
+                <h2 class="section-title">🤖 AIに何でも聞いてみよう！</h2>
+                <p class="section-subtitle">わからないことがあったら、気軽に質問してね。優しく答えてくれるよ💬</p>
+                <div class="chat-container">
+                    <iframe
+                        src="https://udify.app/chatbot/kLjOXSCD0QljXnJS"
+                        style="width: 100%; height: 100%; min-height: 700px"
+                        frameborder="0"
+                        allow="microphone">
+                    </iframe>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- フッター -->
     <footer id="footer">
         <!-- JavaScriptで共通フッターを挿入 -->
     </footer>
-
-    <!-- Difyチャットボット埋め込み -->
-    <script src="https://udify.app/embed.js"
-            data-chatbot-id="daisen-gikai"
-            data-theme="light"
-            data-position="bottom-right">
-    </script>
 
     <!-- カスタムJavaScript -->
     <script src="script.js"></script>
