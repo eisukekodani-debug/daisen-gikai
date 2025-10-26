@@ -1,0 +1,21 @@
+# robots.txt for daisen-gikai.com
+# 大山町みらい議会 - 中学生でもわかる議会情報サイト
+
+# すべてのクローラーを許可
+User-agent: *
+Allow: /
+
+# サイトマップの場所
+Sitemap: https://daisen-gikai.com/sitemap.xml
+
+# クロール速度の調整（オプション）
+# 主要な検索エンジンボット向け
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 0
+
+# 特定のファイルやディレクトリを除外する場合（現在は全て許可）
+# Disallow: /admin/
+# Disallow: /private/

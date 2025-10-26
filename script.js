@@ -291,6 +291,12 @@ function loadBillDetail() {
 }
 
 function displayBillDetail(bill) {
+    // メタタグを動的に更新（SEO最適化）
+    updateMetaTags(bill);
+
+    // 構造化データを動的に追加
+    addStructuredData(bill);
+
     // ヘッダー部分
     const headerElement = document.querySelector('.bill-detail-header .container');
     if (headerElement) {
@@ -362,6 +368,102 @@ function displayBillDetail(bill) {
             ${questionsHTML}
         `;
     }
+}
+
+// ========================================
+// メタタグの動的更新（SEO最適化）
+// ========================================
+function updateMetaTags(bill) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const billId = urlParams.get('id');
+    const pageUrl = `https://daisen-gikai.com/bill.html?id=${billId}`;
+    const pageTitle = `${bill.title} - 大山町みらい議会`;
+    const pageDescription = `${bill.summary} | 予算: ${bill.budget} | ${bill.date}`;
+
+    // タイトルを更新
+    document.title = pageTitle;
+
+    // メタタグを更新
+    updateMetaTag('name', 'title', pageTitle);
+    updateMetaTag('name', 'description', pageDescription);
+    updateMetaTag('name', 'keywords', `大山町,議会,${bill.number},${bill.title},みらい議会,中学生,AI,わかりやすい,地方自治,町政,鳥取県`);
+
+    // Canonical URLを更新
+    const canonicalLink = document.getElementById('canonical-url');
+    if (canonicalLink) {
+        canonicalLink.setAttribute('href', pageUrl);
+    }
+
+    // OGタグを更新
+    updateMetaTag('property', 'og:title', pageTitle, 'og-title');
+    updateMetaTag('property', 'og:description', pageDescription, 'og-description');
+    updateMetaTag('property', 'og:url', pageUrl, 'og-url');
+
+    // Twitterタグを更新
+    updateMetaTag('property', 'twitter:title', pageTitle, 'twitter-title');
+    updateMetaTag('property', 'twitter:description', pageDescription, 'twitter-description');
+    updateMetaTag('property', 'twitter:url', pageUrl, 'twitter-url');
+}
+
+function updateMetaTag(attr, attrValue, content, id = null) {
+    let element;
+    if (id) {
+        element = document.getElementById(id);
+    } else {
+        element = document.querySelector(`meta[${attr}="${attrValue}"]`);
+    }
+    if (element) {
+        element.setAttribute('content', content);
+    }
+}
+
+// ========================================
+// 構造化データの動的追加（SEO最適化）
+// ========================================
+function addStructuredData(bill) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const billId = urlParams.get('id');
+
+    // 既存の構造化データスクリプトを削除
+    const existingScript = document.getElementById('bill-structured-data');
+    if (existingScript) {
+        existingScript.remove();
+    }
+
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "GovernmentService",
+        "name": bill.title,
+        "description": bill.summary,
+        "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "大山町みらい議会",
+            "url": "https://daisen-gikai.com/"
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "大山町",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "大山町",
+                "addressRegion": "鳥取県",
+                "addressCountry": "JP"
+            }
+        },
+        "url": `https://daisen-gikai.com/bill.html?id=${billId}`,
+        "datePublished": bill.date,
+        "budget": {
+            "@type": "MonetaryAmount",
+            "currency": "JPY",
+            "value": bill.budget
+        }
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'bill-structured-data';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
 }
 
 // 議案詳細ページの場合、データを読み込む
